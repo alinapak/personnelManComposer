@@ -1,0 +1,20 @@
+{
+    "name": "alina/composer-sprint",
+    "description": "personnel management sprint project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Alina Pakamorytė"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^2.12",
+        "symfony/cache": "^6.1",
+        "doctrine/annotations": "^1.13"
+    },
+    "autoload": {
+        "psr-4": { 
+			"Entities\\": "src/entities/"
+		}
+    }
+}
