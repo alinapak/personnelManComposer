@@ -8,7 +8,6 @@ body {
 }
 .navbar {
    background-color: #E8E8E8;
-   position: fixed;
    top: 0;
    width: 100%;
    display: flex;
@@ -47,7 +46,7 @@ footer {
    text-align: center;
 }
 table {
-   margin-top: 10%;
+   margin-top: 1%;
    text-align: center;
    width: 100%;
    border-collapse: collapse;

@@ -27,4 +27,4 @@ To launch this project you will need `Git Bash` or `VSCode`, `MySQL Workbench` a
       * Other commands nescessary???
 
 ## How to Use
-After you typed in your browser search bar `localhost/personnelManComposer` you will get to home page. You can navigate via navbar to Employees or Projects Table and see data from DB that you created with console scripts descriped earlier. Now you can update, delete or also create new data via browser.
+After you typed in your browser search bar `localhost/personnelManComposer` you will get to home page. You can navigate via navbar to Employees or Projects Table and see data from DB that you created with console scripts descriped earlier. Now you can update, delete or also create new data via browser. If you haven't created data with console script, then you can do that via browser and then also use update or delete settings.

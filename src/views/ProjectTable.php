@@ -8,7 +8,7 @@
     }
 
     if (isset($_POST['createProj'])) {
-        $repeatedProjName="";
+        $repeatedProjMsg="";
         $newproject = new Project();
         $projName = htmlspecialchars($_POST['createProj']);
         $checkFromDb = $entityManager->getRepository('Entities\Project')->findBy(array("project_name" => $projName));
@@ -19,9 +19,15 @@
                 redirect_to_root();
             }
             else {
-                $repeatedProjName= "<p class='message'>Projektas tokiu pavadinimu jau egzistuoja</p>"; 
+                $repeatedProjMsg= "<p class='message'>Projektas tokiu pavadinimu jau egzistuoja</p>"; 
             }
         }
+    if(isset($_POST['deleteP'])){
+        $project = $entityManager->find('Entities\Project', $_POST['deleteP']);
+        $entityManager->remove($project);
+        $entityManager->flush();
+        redirect_to_root();
+    }
     print('<div class="navbar">
             <div>
                 <a href="./">Home</a>
@@ -36,7 +42,7 @@
             <tr>
                 <th>ID</th>
                 <th>Projektas</th>
-                <th> Darbuotojas</th>
+                <th> Darbuotojai</th>
                 <th>Pasirinktys</th>
             </tr>");
     foreach ($projects as $project) {
@@ -49,10 +55,15 @@
                 <td>" . $project->getProjName()  . "</td>");
         $oneProject = implode(", ", $concated);
         print("<td>" . $oneProject . "</td>");
+        print('<td>
+                    <form method="POST" action="">
+                        <button id= "deleteP" name="deleteP" value="' . $project->getId() . '">Ištrinti</button>
+                    </form>
+                </td>');
     }
     print("</tr>
             </table>");
-    isset($_POST['createProj'])?print($repeatedProjName):"";
+    isset($_POST['createProj']) ? print($repeatedProjMsg) : "";
     print("<form class='createForm' action='' method='POST'>
             <input type='text' name='createProj' required>
             <button>Pridėti</button>
