@@ -30,10 +30,16 @@ class Employee{
     public function getId(){
         return $this->id;
     }
-    public function setName(){
+    public function setName($fname){
+        return $this->fname = $fname;
+    }
+    public function getName(){
         return $this->fname;
     }
-    public function setSurname(){
+    public function setSurname($lname){
+        return $this->lname = $lname;
+    }
+    public function getSurname(){
         return $this->lname;
     }
 }

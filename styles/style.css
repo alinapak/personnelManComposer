@@ -66,3 +66,40 @@ table td {
    padding: 1rem;
    border-color: #E8E8E8;
 }
+.createForm{
+   display: flex;
+   flex-direction: column;
+   width: 25%;
+   text-align: center;
+   margin-top: 2rem;
+   margin-left: 1rem;
+   gap: 0.5rem;
+}
+
+.createForm input[type=text] {
+   width: 100%;
+   padding: 0.5rem;
+   margin: 0 auto;
+   display: block;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   box-sizing: border-box;
+}
+button {
+   background-color: rgb(153, 53, 53);
+   border: none;
+   color: white;
+   padding: 0.5rem;
+   margin: 1px;
+   border-radius: 5px;
+   font-size: 16px;
+}
+
+button:hover {
+   background-color: rgba(153, 53, 53, 0.678);
+}
+.message{
+   font-size: larger;
+   background-color:rgba(153, 53, 53, 0.159) ;
+   padding: 1rem;
+}

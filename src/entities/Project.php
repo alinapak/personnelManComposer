@@ -26,9 +26,12 @@ class Project{
     public function getId(){
         return $this->id;
     }
-    public function setProjName() {
-            return $this->project_name;
+    public function setProjName($project_name) {
+            return $this->project_name = $project_name;
     }
+    public function getProjName() {
+        return $this->project_name;
+}
     public function __construct() {
         $this->employeeWithProj = new ArrayCollection();
     }
