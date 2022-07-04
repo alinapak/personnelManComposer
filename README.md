@@ -14,7 +14,7 @@ This is my third PHP project created for study purposes. It was used raw CSS and
 To launch this project you will need `Git Bash` or `VSCode`, `MySQL Workbench` and `Xampp` apps.
 
 1. To clone this project, start servers and create database: 
-   * Navigate to htdocs folder and with your Git Bash or via VSCode terminal type git clone `https://github.com/alinapak/personnelManComposer.git`;
+   * Navigate to `htdocs` folder and with your Git Bash or via VSCode terminal type git clone `https://github.com/alinapak/personnelManComposer.git`;
    * Open Xampp and make sure that Apache and MySQL servers are on;
    * Open MySQL workbench and connect at any your connection (connection should support creating database and reading, creating, updating and deleting tables);
    * In your chosen connection manually create DATABASE named *personnel_projects* or copy this command: `CREATE DATABASE personnel_projects`;
@@ -28,7 +28,9 @@ To launch this project you will need `Git Bash` or `VSCode`, `MySQL Workbench` a
 3. Launch this project: 
    * Open project folder with VSCode and in your terminal type:
       * `php ../composer.phar install`;
-      **NOTE** "../composer.phar" is 'composer.phar' file path, so if that file is in other place than htdocs folder, you have to specify 'composer.phar' path while typing this command.
+
+      **NOTE**
+      `../composer.phar` is 'composer.phar' file path, so if that file is in other place than `htdocs` folder, you have to specify 'composer.phar' path while typing this command.
    * For database schema generation (powershell recommended, because with Git Bash it could not work) type in terminal:
       * `vendor\bin\doctrine orm:schema-tool:update --force --dump-sql`.
 4. Now you have necessary tables in your database. You also can create some data with console script:
