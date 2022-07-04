@@ -1,11 +1,13 @@
 * {
    font-family: 'Roboto', sans-serif;
 }
+
 html,
 body {
-   height:100%;
-   margin:0;
+   height: 100%;
+   margin: 0;
 }
+
 .navbar {
    background-color: #E8E8E8;
    top: 0;
@@ -31,10 +33,7 @@ body {
    padding: 2rem;
    font-size: 20px;
 }
-#home {
-   margin-top: 10rem;
-   margin-left:5rem;
-}
+
 footer {
    padding: 1rem;
    position: sticky;
@@ -42,9 +41,11 @@ footer {
    background-color: #E8E8E8;
    margin-top: 2rem;
 }
+
 #footerText {
    text-align: center;
 }
+
 table {
    margin-top: 1%;
    text-align: center;
@@ -65,7 +66,9 @@ table td {
    padding: 1rem;
    border-color: #E8E8E8;
 }
-.createForm, .updateForm{
+
+.createForm,
+.updateForm {
    display: flex;
    flex-direction: column;
    width: 25%;
@@ -75,7 +78,8 @@ table td {
    gap: 0.5rem;
 }
 
-.createForm input[type=text], .updateForm input[type=text] {
+.createForm input[type=text],
+.updateForm input[type=text] {
    width: 100%;
    padding: 0.5rem;
    margin: 0 auto;
@@ -84,6 +88,7 @@ table td {
    border-radius: 5px;
    box-sizing: border-box;
 }
+
 button {
    background-color: rgb(153, 53, 53);
    border: none;
@@ -97,11 +102,13 @@ button {
 button:hover {
    background-color: rgba(153, 53, 53, 0.678);
 }
-.message{
+
+.message {
    font-size: larger;
-   background-color:rgba(153, 53, 53, 0.159) ;
+   background-color: rgba(153, 53, 53, 0.159);
    padding: 1rem;
 }
+
 select#projId {
    color: rgb(153, 53, 53);
    border-radius: 5px;
@@ -122,4 +129,20 @@ select option:hover {
 
 option:checked {
    box-shadow: 0 0 10px 100px #cdcdca inset;
+}
+
+#noSuchPage {
+   width: 700px;
+   margin: 0 auto;
+   display: block;
+}
+
+#home {
+   margin-top: 10rem;
+   text-align: center;
+}
+
+#homeText {
+   font-size: larger;
+   text-align: center;
 }
