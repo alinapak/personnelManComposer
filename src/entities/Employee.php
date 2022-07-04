@@ -42,4 +42,7 @@ class Employee{
     public function getSurname(){
         return $this->lname;
     }
+    public function getProj($proj_id){
+        return $this->project_id=$proj_id;
+    }
 }

@@ -22,11 +22,27 @@
                 $repeatedProjMsg= "<p class='message'>Projektas tokiu pavadinimu jau egzistuoja</p>"; 
             }
         }
+        
     if(isset($_POST['deleteP'])){
         $project = $entityManager->find('Entities\Project', $_POST['deleteP']);
         $entityManager->remove($project);
         $entityManager->flush();
         redirect_to_root();
+    }
+    
+    if(isset($_POST['updatePToDB'])){
+        $repeatedProjMsg="";
+        $project = $entityManager->find('Entities\Project', $_POST['updatePToDB']);
+        $projName = htmlspecialchars($_POST['projUpdateName']);
+        $checkFromDb = $entityManager->getRepository('Entities\Project')->findBy(array("project_name" => $projName));
+        if ($checkFromDb[0] === NULL) {
+            $project->setProjName($projName);
+            $entityManager->flush();
+            redirect_to_root();
+        }
+        else {
+            $repeatedProjMsg= "<p class='message'>Projektas tokiu pavadinimu jau egzistuoja</p>"; 
+        }
     }
     print('<div class="navbar">
             <div>
@@ -58,16 +74,28 @@
         print('<td>
                     <form method="POST" action="">
                         <button id= "deleteP" name="deleteP" value="' . $project->getId() . '">Ištrinti</button>
+                        <button id= "updateP" name="updateP" value="' . $project->getId() . '">Atnaujinti</button>
                     </form>
                 </td>');
     }
     print("</tr>
             </table>");
     isset($_POST['createProj']) ? print($repeatedProjMsg) : "";
+    isset($_POST['updatePToDB']) ? print($repeatedProjMsg) : "";
+    if (!isset($_POST['updateP'])) {
     print("<form class='createForm' action='' method='POST'>
             <input type='text' name='createProj' required>
             <button>Pridėti</button>
         </form>");
+    }
+    else if (isset($_POST['updateP'])){
+        print("<form class='updateForm' action='' method='POST'>
+                    <p>Pakeisti projektą, kurio id yra " . $_POST['updateP'] . "</p>");
+        $project = $entityManager->find('Entities\Project', $_POST['updateP']);
+            print("<input type='text' name='projUpdateName' value='" . $project->getProjName()  . "' required>
+                    <button type='updatePToDB' name='updatePToDB' value='" . $_POST['updateP'] . "'>Pakeisti</button>
+            </form>");
+    }
     print("<footer>
             <p id='footerText'> Copyright ©    <script>document.write(new Date().getFullYear())</script></p>
         </footer>");

@@ -65,7 +65,7 @@ table td {
    padding: 1rem;
    border-color: #E8E8E8;
 }
-.createForm{
+.createForm, .updateForm{
    display: flex;
    flex-direction: column;
    width: 25%;
@@ -75,7 +75,7 @@ table td {
    gap: 0.5rem;
 }
 
-.createForm input[type=text] {
+.createForm input[type=text], .updateForm input[type=text] {
    width: 100%;
    padding: 0.5rem;
    margin: 0 auto;
@@ -101,4 +101,25 @@ button:hover {
    font-size: larger;
    background-color:rgba(153, 53, 53, 0.159) ;
    padding: 1rem;
+}
+select#projId {
+   color: rgb(153, 53, 53);
+   border-radius: 5px;
+   padding: 0.5rem;
+   text-align: center;
+   border-color: rgb(153, 53, 53);
+   font-weight: bold;
+}
+
+select option {
+   padding: 0.5rem;
+   font-weight: bold;
+}
+
+select option:hover {
+   background-color: rgba(0, 0, 0, 0.1);
+}
+
+option:checked {
+   box-shadow: 0 0 10px 100px #cdcdca inset;
 }
