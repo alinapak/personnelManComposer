@@ -9,7 +9,7 @@
     $proxyDir = null;
     $cache = null;
     $useSimpleAnnotationReader = false;
-    $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), $isDevMode, $proxyDir, $cache, $useSimpleAnnotationReader);
+    $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src/entities"), $isDevMode, $proxyDir, $cache, $useSimpleAnnotationReader);
 
     $conn = array(
         'driver' => 'pdo_mysql',
