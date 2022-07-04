@@ -14,7 +14,7 @@ This is my third PHP project created for study purposes. It was used raw CSS and
 To launch this project you will need `Git Bash` or `VSCode`, `MySQL Workbench` and `Xampp` apps.
 
 1. To clone this project, start servers and create database: 
-   *Navigate to htdocs folder and with your Git Bash or via VSCode terminal type git clone `https://github.com/alinapak/personnelManComposer.git`;
+   * Navigate to htdocs folder and with your Git Bash or via VSCode terminal type git clone `https://github.com/alinapak/personnelManComposer.git`;
    * Open Xampp and make sure that Apache and MySQL servers are on;
    * Open MySQL workbench and connect at any your connection (connection should support creating database and reading, creating, updating and deleting tables);
    * In your chosen connection manually create DATABASE named *personnel_projects* or copy this command: `CREATE DATABASE personnel_projects`;
