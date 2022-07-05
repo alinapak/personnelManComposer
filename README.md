@@ -40,8 +40,8 @@ To launch this project you will need `Git Bash` or `VSCode`, `MySQL Workbench` a
    * Or you can create data when you will start to use this App in your browser.
 
 ## How to Use
-After you typed in your browser search bar `localhost/personnelManComposer` you will get to home page. You can navigate via navbar to Employees or Projects Table and see data from DB that you created with console scripts descriped earlier. Now you can update, delete or also create new data via browser. 
-If you haven't created data with console script, then you can simply do that with opened app and then also use update or delete settings.
+After you typed in your browser search bar `localhost/personnelManComposer` you will get to home page. You can navigate via navbar to Employees or Projects Table and see data from DB that you created with console scripts descriped earlier. Now you can update, delete or also create new data via browser. While updating employee, you can assign a project to employee.
+If you haven't created data with console script, then you can simply do that with opened app in your browser and then also use update or delete settings.
 
 ## Author
 This project was created by me [Alina Pakamorytė](https://www.linkedin.com/in/alina-pakamoryt%C4%97-73a66377/) 
