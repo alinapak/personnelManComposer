@@ -16,8 +16,8 @@ To launch this project you will need `Git Bash` or `VSCode`, `MySQL Workbench` a
 1. To clone this project, start servers and create database: 
    * Navigate to `htdocs` folder and with your Git Bash or via VSCode terminal type `git clone https://github.com/alinapak/personnelManComposer.git`;
    * Open Xampp and make sure that Apache and MySQL servers are on;
-   * Open MySQL workbench and connect at any your connection (connection should support creating database and reading, creating, updating and deleting tables);
-   * In your chosen connection manually create DATABASE named *personnel_projects* or copy this command: `CREATE DATABASE personnel_projects`;
+   * Open MySQL workbench and connect to connection which user is root;
+   * In your connection manually create DATABASE named *personnel_projects* or copy this command: `CREATE DATABASE personnel_projects`;
 2. Composer installation to launch this project (**if you already have Composer, skip this step**):
    * Navigate to directory, where you want to install Composer (composer.phar file path will be necessary for command line to launch this project);
    * You can install composer with your command line (copy and paste theese commands in your command line):
