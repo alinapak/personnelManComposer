@@ -16,16 +16,16 @@
       $url = $_SERVER['REQUEST_URI'];
 
       switch ($url) {
-         case '/personnelmancomposer/':
+         case '/personnelManComposer/':
             require __DIR__ . '/src/views/index.php';
             break;
-         case '/personnelmancomposer':
-            require __DIR__ . 'src/views/index.php';
-            break;
-         case '/personnelmancomposer/darbuotojai':
+         // case '/personnelManComposer':
+         //    require __DIR__ . 'src/views/index.php';
+         //    break;
+         case '/personnelManComposer/darbuotojai':
             require __DIR__ . '/src/views/EmployeeTable.php';
             break;
-         case '/personnelmancomposer/projektai':
+         case '/personnelManComposer/projektai':
             require __DIR__ . '/src/views/ProjectTable.php';
             break;
          default:
